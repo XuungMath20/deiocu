@@ -1402,7 +1402,7 @@ function redzlib:MakeWindow(Configs)
     end;LoadFile()
     
     local UISizeX, UISizeY = unpack(redzlib.Save.UISize)
-    local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
+        local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
         Size = UDim2.fromOffset(UISizeX, UISizeY),
         Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
         BackgroundTransparency = 1,
@@ -1412,9 +1412,6 @@ function redzlib:MakeWindow(Configs)
 
     Make("Stroke", MainFrame, {Color = Theme["Color Stroke"]})
     Make("Corner", MainFrame, UDim.new(0, 16))
-    Make("Gradient", MainFrame, {
-        Rotation = 45
-    })
     MakeDrag(MainFrame)
 
     local WindowBackground = Create("ImageLabel", MainFrame, {
@@ -1424,7 +1421,7 @@ function redzlib:MakeWindow(Configs)
         BackgroundTransparency = 1,
         Image = "rbxassetid://105708987332925",
         ImageColor3 = Color3.fromRGB(255, 255, 255),
-        ImageTransparency = 0.5,
+        ImageTransparency = 0,
         ScaleType = Enum.ScaleType.Crop,
         ZIndex = 0
     })
